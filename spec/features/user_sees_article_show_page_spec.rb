@@ -4,8 +4,8 @@ describe 'user sees article show page' do
  describe 'when a user clicks on an article title from the index page' do
     it 'lets them see the article' do
       article_1 = Article.create!(title: "Title 1", body: "Body 1")
-      comment_1 = article.comments.create(author_name: "Me", body: "Commenty comments")
-      comment_2 = article.comments.create(author_name: "You", body: "So much to say")
+      comment_1 = article_1.comments.create(author_name: "Me", body: "Commenty comments")
+      comment_2 = article_1.comments.create(author_name: "You", body: "So much to say")
 
       visit articles_path
 
